@@ -18,7 +18,7 @@ def main():
     parser.add_option('-f', dest='zname',type='string',help='specify zip file')
     parser.add_option('-f', dest='dname', type='string', help='specify dict file')
     (options, args) = parser.parse_args()
-    if (options.zname == None) | (options.dname == None):
+    if (options.zname is None) or (options.dname is None):
         print parser.usage
         exit(0)
     else:
